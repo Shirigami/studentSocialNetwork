@@ -12,7 +12,7 @@ import java.sql.*;
 public class SocialNetworkServer extends HttpServlet{
 
 
-  private void startWebServer() throws Exception{
+  public void startWebServer() throws Exception{
     Server server = new Server(Integer.valueOf(System.getenv("PORT")));
     ServletContextHandler context = new ServletContextHandler(ServletContextHandler.SESSIONS);
     context.setContextPath("/");
