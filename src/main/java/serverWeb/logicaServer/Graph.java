@@ -8,7 +8,5 @@ public class Graph{
     people.add(person);
   }
 
-  public   
-
 
 }

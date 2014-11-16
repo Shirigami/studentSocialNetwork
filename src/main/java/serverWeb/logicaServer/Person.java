@@ -22,11 +22,12 @@ public class Person{
     this.age = age;
     this.carear = carear;
     this.ageCarear = ageCarear;
-    this.numberPhone = numerPhone;
+    this.numberPhone = numberPhone;
     this.address = address;
     this.email = email;
 
   }
+
 
   public String getName(){
     return this.name;
