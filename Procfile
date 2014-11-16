@@ -1,1 +1,1 @@
-web:    java -cp target/classes:target/dependency/* serverWeb.Main
+web:    java -cp target/socialNetwork-1.0-SNAPSHOT.jar serverWeb.Main
