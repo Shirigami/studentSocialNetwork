@@ -1,3 +1,5 @@
+package logicaServer;
+
 import java.util.ArrayList;
 
 

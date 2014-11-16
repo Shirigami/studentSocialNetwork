@@ -1,3 +1,5 @@
+package logicaServer;
+
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.http.*;
@@ -7,7 +9,19 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.sql.*;
 
-public class WebServer extends HttpServlet {
+public class SocialNetworkServer extends HttpServlet{
+
+
+  private void startWebServer() throws Exception{
+    Server server = new Server(Integer.valueOf(System.getenv("PORT")));
+    ServletContextHandler context = new ServletContextHandler(ServletContextHandler.SESSIONS);
+    context.setContextPath("/");
+    server.setHandler(context);
+    context.addServlet(new ServletHolder(new SocialNetworkServer()),"/*");
+    server.start();
+    server.join();
+  }
+
   @Override
   protected void doGet(HttpServletRequest req, HttpServletResponse resp)
       throws ServletException, IOException {
