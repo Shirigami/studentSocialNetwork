@@ -12,18 +12,6 @@ import org.eclipse.jetty.server.handler.AbstractHandler;
 
 public class SocialNetworkServer extends AbstractHandler{
 
-  public void startServer(){
-    try{
-      Server server = new Server(8080);
-      server.setHandler(new SocialNetworkServer());
-
-      server.start();
-      server.join();
-    }catch(Exception e){
-      System.out.println("Running server Failed");
-    }
-  }
-
   public void handle(String target,Request baseRequest,
     HttpServletRequest request, HttpServletResponse response)
 
